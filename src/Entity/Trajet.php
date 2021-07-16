@@ -5,7 +5,7 @@ namespace App\Entity;
 use ApiPlatform\Core\Annotation\ApiResource;
 use App\Repository\TrajetRepository;
 use Doctrine\ORM\Mapping as ORM;
-//qsqsd
+//qsqsd zefze
 /**
  * @ApiResource()
  * @ORM\Entity(repositoryClass=TrajetRepository::class)
