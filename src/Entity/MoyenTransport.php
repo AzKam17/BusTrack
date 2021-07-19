@@ -31,6 +31,11 @@ class MoyenTransport
      */
     private $trajets;
 
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $numOrdre;
+
     public function __construct()
     {
         $this->trajets = new ArrayCollection();
@@ -76,6 +81,18 @@ class MoyenTransport
         if ($this->trajets->removeElement($trajet)) {
             $trajet->removeMoyenTransport($this);
         }
+
+        return $this;
+    }
+
+    public function getNumOrdre(): ?string
+    {
+        return $this->numOrdre;
+    }
+
+    public function setNumOrdre(string $numOrdre): self
+    {
+        $this->numOrdre = $numOrdre;
 
         return $this;
     }
